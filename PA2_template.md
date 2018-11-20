@@ -42,7 +42,7 @@ ggplot(average, aes(x = interval, y = average_steps, type = "l")) + geom_line(co
 interval_max_steps <- filter(average, average_steps == max(average$average_steps))
 interval_max_steps
 ```
-![](/Figures/Average_daily_activity.png)
+![](Figures/Average_daily_activity.png)
 
 Answer: interval 835 contains the maximum number of steps. The person is very active at around 2:00pm (to be accurate at 1:55pm)
 
