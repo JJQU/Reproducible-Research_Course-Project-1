@@ -82,16 +82,16 @@ wkd <- weekdays(as.Date(strptime(activity_new$date, format =  "%Y-%m-%d")))
 wkd <- as.factor(wkd)
 str(wkd)
 
-activity_by_date <- cbind(activity_new, wkd)
-head(activity_by_date)
-str(activity_by_date)
+activity_wkd <- cbind(activity_new, wkd)
+head(activity_wkd)
+str(activity_wkd)
 
-levels(activity_by_date$wkd) <- list(weekday = c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"), 
+levels(activity_wkd$wkd) <- list(weekday = c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"), 
                                      weekend = c("Saturday", "Sunday"))
-levels(activity_by_date$wkd)
+levels(activity_wkd$wkd)
 
 par(mfrow = c(2,1))
-with(activity_by_date[activity_by_date$wkd == "weekday", ], plot(aggregate(steps ~ interval, FUN = mean), type = "l", main = "Activity in Weekdays"))
-with(activity_by_date[activity_by_date$wkd == "weekend", ], plot(aggregate(steps ~ interval, FUN = mean), type = "l", main = "Activity in Weekends"))
+with(activity_wkd[activity_wkd$wkd == "weekday", ], plot(aggregate(steps ~ interval, FUN = mean), type = "l", main = "Activity in Weekdays"))
+with(activity_wkd[activity_wkd$wkd == "weekend", ], plot(aggregate(steps ~ interval, FUN = mean), type = "l", main = "Activity in Weekends"))
 
 
