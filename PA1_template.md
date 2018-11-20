@@ -31,13 +31,14 @@ median_dailysteps <- median(steps$steps_per_day, na.rm = TRUE)
 median_dailysteps
 '''
 
-![](/Figures/Total_Steps_Daily.png)
+![](https://github.com/JJQU/Reproducible-Research_Course-Project-1/blob/master/Figures/Total_Steps_Daily.png)
 
 Answer: 
 The mean of the total number of steps taken per day is equal to 10766.19
 The median of the total number of steps taken per day is equal to 10765
 
-## What is the average daily activity pattern?
+## What is the average daily activity pattern
+
 ```{r}
 library(ggplot2)
 
