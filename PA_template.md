@@ -18,3 +18,27 @@ interval: Identifier for the 5-minute interval in which measurement was taken
 
 The dataset is stored in a comma-separated-value (CSV) file and there are a total of 17,568 observations in this dataset.
 
+## Assigment
+## Loading and preprocessing the data
+
+library(dplyr)
+
+if(!file.exists("data")){
+  dir.create("data")
+}
+list.files("./data")
+
+activity <- read.csv("./data/activity.csv", header = TRUE, stringsAsFactors = FALSE)
+str(activity)
+head(activity)
+tail(activity)
+
+str(activity)
+'data.frame':	17568 obs. of  3 variables:
+ $ steps   : num  1.717 0.3396 0.1321 0.1509 0.0755 ...
+ $ date    : chr  "2012-10-01" "2012-10-01" "2012-10-01" "2012-10-01" ...
+ $ interval: int  0 5 10 15 20 25 30 35 40 45 ...
+ 
+steps <- activity %>% select(steps, date) %>% group_by(date) %>% summarise(steps_per_day = sum(steps))
+str(steps)
+head(steps)
