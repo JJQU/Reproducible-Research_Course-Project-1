@@ -41,7 +41,7 @@ ggplot(average, aes(x = interval, y = average_steps, type = "l")) + geom_line(co
 interval_max_steps <- filter(average, average_steps == max(average$average_steps))
 interval_max_steps
 ```
-![](Figures/Average dialy activity pattern.png)
+![](Figures/Average_daily_activity.png)
 
 Answer: interval 835 contains the maximum number of steps. The person is very active at around 2:00pm (to be accurate at 1:55pm)
 
@@ -57,7 +57,7 @@ mean_dailysteps_new
 median_dailysteps_new <- median(steps_new$steps_per_day_new, na.rm = TRUE)
 median_dailysteps_new
 ```
-![](Figures/Total Number of Steps_new.png)
+![](Figures/Total_Steps_Imputed.png)
 
 Answer: 
 There are 2304 missing value in total in the dataset
@@ -76,6 +76,7 @@ par(mfrow = c(2,1))
 with(activity_wkd[activity_wkde$wkd == "weekday", ], plot(aggregate(steps ~ interval, FUN = mean), type = "l", main = "Activity in Weekdays"))
 with(activity_wkd[activity_wkd$wkd == "weekend", ], plot(aggregate(steps ~ interval, FUN = mean), type = "l", main = "Activity in Weekends"))
 ```
+![](Figures/Weekday_Pattern_Difference.png)
 
 Answer:
 The person is more activate in weekends than in weekdays
