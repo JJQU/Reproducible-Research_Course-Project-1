@@ -29,8 +29,11 @@ The dataset is stored in a comma-separated-value (CSV) file and there are a tota
 > list.files("./data")
 
 > activity <- read.csv("./data/activity.csv", header = TRUE, stringsAsFactors = FALSE)
+
 > str(activity)
+
 > head(activity)
+
 > tail(activity)
 
 
