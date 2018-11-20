@@ -41,6 +41,7 @@ ggplot(average, aes(x = interval, y = average_steps, type = "l")) + geom_line(co
 interval_max_steps <- filter(average, average_steps == max(average$average_steps))
 interval_max_steps
 ```
+![](Figures/Average dialy activity pattern.png)
 
 Answer: interval 835 contains the maximum number of steps. The person is very active at around 2:00pm (to be accurate at 1:55pm)
 
@@ -56,6 +57,7 @@ mean_dailysteps_new
 median_dailysteps_new <- median(steps_new$steps_per_day_new, na.rm = TRUE)
 median_dailysteps_new
 ```
+![](Figures/Total Number of Steps_new.png)
 
 Answer: 
 There are 2304 missing value in total in the dataset
