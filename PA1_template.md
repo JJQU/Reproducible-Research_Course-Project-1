@@ -29,9 +29,9 @@ mean_dailysteps
 
 median_dailysteps <- median(steps$steps_per_day, na.rm = TRUE)
 median_dailysteps
-
-![Total Steps Daily](C:/Users/JJQ/Documents/Education/Johns Hopkins/Assignment/Course 5_Reproducible Research/Course Project 1/Total_Steps_Daily.png)
 '''
+![](/Figure/Total_Steps_Daily.png)
+
 Answer: 
 The mean of the total number of steps taken per day is equal to 10766.19
 The median of the total number of steps taken per day is equal to 10765
