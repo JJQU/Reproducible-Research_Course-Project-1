@@ -21,26 +21,19 @@ The dataset is stored in a comma-separated-value (CSV) file and there are a tota
 ## Assigment
 ## Loading and preprocessing the data
 
-library(dplyr)
+> library(dplyr)
 
-if(!file.exists("data")){
+> if(!file.exists("data")){
   dir.create("data")
 }
-list.files("./data")
+> list.files("./data")
 
-activity <- read.csv("./data/activity.csv", header = TRUE, stringsAsFactors = FALSE)
-str(activity)
-head(activity)
-tail(activity)
+> activity <- read.csv("./data/activity.csv", header = TRUE, stringsAsFactors = FALSE)
+> str(activity)
+> head(activity)
+> tail(activity)
 
-##      steps            date              interval     
-##  Min.   :  0.00   Length:17568       Min.   :   0.0  
-##  1st Qu.:  0.00   Class :character   1st Qu.: 588.8  
-##  Median :  0.00   Mode  :character   Median :1177.5  
-##  Mean   : 37.38                      Mean   :1177.5  
-##  3rd Qu.: 12.00                      3rd Qu.:1766.2  
-##  Max.   :806.00                      Max.   :2355.0  
-##  NA's   :2304
+
  
 steps <- activity %>% select(steps, date) %>% group_by(date) %>% summarise(steps_per_day = sum(steps))
 str(steps)
