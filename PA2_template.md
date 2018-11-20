@@ -78,7 +78,8 @@ par(mfrow = c(2,1))
 with(activity_wkd[activity_wkde$wkd == "weekday", ], plot(aggregate(steps ~ interval, FUN = mean), type = "l", main = "Activity in Weekdays"))
 with(activity_wkd[activity_wkd$wkd == "weekend", ], plot(aggregate(steps ~ interval, FUN = mean), type = "l", main = "Activity in Weekends"))
 ```
-![](Figures/Weekday_Pattern_Difference.png)
 
 Answer:
 The person is more activate in weekends than in weekdays
+
+<img src=""Figures/Weekday_Pattern_Difference.png">
